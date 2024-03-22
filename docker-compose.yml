@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password --init-file /docker-entrypoint-initdb.d/docker_mysql_init.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=node-nest
+    ports:
+      - '3310:3306'
+    volumes:
+      - ./docker/mysql_data:/var/lib/mysql
+      - ./docker/docker_mysql_init.sql:/docker-entrypoint-initdb.d/docker_mysql_init.sql
