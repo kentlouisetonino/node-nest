@@ -2,7 +2,7 @@
 #
 > - This is based on Postman testing.
 
-```plaintext
+```javascript
 Method: POST
 URL: http://localhost:11000/api/auth/login
 Raw-JSON Payload:
