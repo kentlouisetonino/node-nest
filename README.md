@@ -11,8 +11,13 @@ http://localhost:11000/api
 # Endpoint for health check route.
 /api/health
 
+# Endpoint for authentication.
+/api/auth/login
+
 # Endpoint for user routes.
 /api/user/all
+/api/user/info?id=
+/api/user/info?email=
 /api/user/create
 ```
 

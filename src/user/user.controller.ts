@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Req, Delete, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Req,
+  Delete,
+  UseGuards,
+  BadGatewayException
+} from '@nestjs/common';
 import { Request } from 'express';
 import { UserService } from './user.service';
 import { User } from 'src/entities/User';
@@ -16,14 +24,17 @@ export class UserController {
     return this.userService.getUsers();
   }
 
-  @Get(':id')
+  @Get('info')
   getUserById(@Req() req: Request): Promise<User> {
-    return this.userService.getUserById(Number(req.params.id));
-  }
+    if (req.query.id) {
+      return this.userService.getUserById(Number(req.query.id));
+    }
 
-  @Get(':email')
-  getUserByEmail(@Req() req: Request): Promise<User> {
-    return this.userService.getUserByEmail(req.params.email);
+    if (req.query.email) {
+      return this.userService.getUserByEmail(req.params.email);
+    }
+
+    throw new BadGatewayException();
   }
 
   @Post('create')
