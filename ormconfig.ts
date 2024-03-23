@@ -1,8 +1,8 @@
-import { DataSource } from 'typeorm';
+const DataSource = require('typeorm').DataSource;
 
 // Hard code the values.
 // Process ENV not working properly.
-export const connectionSource = new DataSource({
+const connectionSource = new DataSource({
   migrationsTableName: 'migrations',
   type: 'mysql',
   host: 'localhost',
@@ -17,3 +17,5 @@ export const connectionSource = new DataSource({
   migrations: ['dist/src/migrations/*.js'],
   ssl: false
 });
+
+module.exports = connectionSource;

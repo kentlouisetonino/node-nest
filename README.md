@@ -48,7 +48,7 @@ yarn start:dev
 ```bash
 Server Host: localhost
 Port: 3310
-Database: node-nest
+Database: nodenest
 Username: root
 Password: root
 ```
