@@ -8,8 +8,11 @@
 # Url of the backend.
 http://localhost:11000/api
 
-# Check if endpoint is ready.
-/health
+# Endpoint for health check route.
+/api/health
+
+# Endpoint for user routes.
+/api/user/all
 ```
 
 <br />
