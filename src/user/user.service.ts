@@ -53,7 +53,7 @@ export class UserService {
     });
 
     // Check if user already exist.
-    if (!user) {
+    if (user) {
       throw new ConflictException('Email already exist.');
     }
 

@@ -13,6 +13,7 @@ http://localhost:11000/api
 
 # Endpoint for user routes.
 /api/user/all
+/api/user/create
 ```
 
 <br />
