@@ -11,8 +11,15 @@ Raw-JSON Payload:
     password: string
 }
 
-Reponse:
+Success Reponse:
 {
     accessToken: string
+}
+
+Error Response:
+{
+    message: string,
+    error: string,
+    statusCode: string
 }
 ```
