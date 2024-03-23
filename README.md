@@ -54,10 +54,10 @@ yarn start:dev
 
 ```bash
 # Create an empty migration.
-yarn typeorm migration:create src/migrations/<name-of-migration-file>
+yarn typeorm migration:create src/migrations/<name>
 
 # To generate a new migration based on changes.
-yarn typeorm migration:generate src/migrations/<name-of-the-updated-migration-file> -d ./ormconfig.ts
+yarn typeorm migration:generate src/migrations/<name> -d ./ormconfig.ts
 
 # Run the migration
 yarn typeorm migration:run -d ./ormconfig.ts
