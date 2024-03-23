@@ -16,9 +16,9 @@ export class UserController {
     return this.userService.getUsers();
   }
 
-  @Get()
+  @Get(':id')
   getUserById(@Req() req: Request): Promise<User> {
-    return this.userService.getUserById(Number(req.query.id));
+    return this.userService.getUserById(Number(req.params.id));
   }
 
   @Get(':email')

@@ -7,7 +7,7 @@ import { Request } from 'express';
 export class AuthController {
   constructor(private authService: AuthService) {}
 
-  @Post('Login')
+  @Post('login')
   loginUser(@Req() req: Request): Promise<LoginOutput> {
     return this.authService.loginUser(req.body);
   }
