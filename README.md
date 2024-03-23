@@ -50,7 +50,7 @@ PORT=11000
 
 ```bash
 # Run first the dockerize MySQL engin.
-docker-compose up --build
+docker compose up --build -d
 
 # Run the installation of packages and dependency.
 yarn install
