@@ -2,7 +2,7 @@
 #
 > - A Node.js practice project that uses Nest.js framework.
 
-> - Available endpoints.
+> - Check the [docs](https://github.com/kentlouisetonino/node-nest/tree/develop/docs) for further instruction.
 
 ```bash
 # Url of the backend.
