@@ -6,10 +6,10 @@
 
 ```bash
 # Url of the backend.
-http://localhost:11000
+http://localhost:11000/api
 
 # Check if endpoint is ready.
-/
+/health
 ```
 
 <br />

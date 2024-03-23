@@ -6,7 +6,7 @@ import { DeleteUserOutput } from './dto/user.output';
 import { AuthGuard } from '../auth/guards/auth.guard';
 import { Public } from '../auth/decorators/public.decorator';
 
-@Controller('user')
+@Controller('api/user')
 @UseGuards(AuthGuard)
 export class UserController {
   constructor(private userService: UserService) {}
