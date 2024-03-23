@@ -21,6 +21,10 @@ export class UserService {
     private configService: ConfigService
   ) {}
 
+  async getUsers(): Promise<User[]> {
+    return await this.userRepo.find();
+  }
+
   async getUserById(id: number): Promise<User> {
     const user = await this.userRepo.findOne({ where: { id: id } });
 

@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
 import { config } from './config';
 import { HealthCheckModule } from './health-check/health-check.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -21,7 +23,9 @@ import { HealthCheckModule } from './health-check/health-check.module';
       }),
       inject: [ConfigService]
     }),
-    HealthCheckModule
+    HealthCheckModule,
+    UserModule,
+    AuthModule
   ]
 })
 export class AppModule {}
