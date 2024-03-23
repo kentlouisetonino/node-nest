@@ -2,6 +2,16 @@
 #
 > - A Node.js practice project that uses Nest.js framework.
 
+> - Available endpoints.
+
+```bash
+# Url of the backend.
+http://localhost:11000
+
+# Check if endpoint is ready.
+/
+```
+
 <br />
 <br />
 
@@ -19,7 +29,7 @@ AUTH_PASSWORD_SECRET=passwordTest123456
 # Connecting with MySQL database.
 DB_HOST=localhost
 DB_PORT=3310
-DB_NAME=node-nest
+DB_NAME=nodenest
 DB_USER=root
 DB_ROOT_PASSWORD=root
 
@@ -53,7 +63,7 @@ yarn typeorm migration:generate src/migrations/<name-of-the-updated-migration-fi
 yarn typeorm migration:run -d ./ormconfig.ts
 
 # Reverting the migration.
-```
+`r`
 
 > - Connecting dockerize database to a database client (Workbench, DBeaver).
 
