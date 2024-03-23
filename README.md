@@ -63,7 +63,8 @@ yarn typeorm migration:generate src/migrations/<name-of-the-updated-migration-fi
 yarn typeorm migration:run -d ./ormconfig.ts
 
 # Reverting the migration.
-`r`
+yarn typeorm migration:revert -d ./ormconfig.ts
+```
 
 > - Connecting dockerize database to a database client (Workbench, DBeaver).
 
