@@ -31,7 +31,7 @@ export class UserController {
     }
 
     if (req.query.email) {
-      return this.userService.getUserByEmail(req.params.email);
+      return this.userService.getUserByEmail(req.query.email as string);
     }
 
     throw new BadGatewayException();
@@ -48,7 +48,7 @@ export class UserController {
     return this.userService.updateUser(req.body);
   }
 
-  @Delete('delete/:id')
+  @Delete('delete')
   deleteUser(@Req() req: Request): Promise<DeleteUserOutput> {
     return this.userService.deleteUser(Number(req.params.id));
   }

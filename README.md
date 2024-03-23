@@ -19,6 +19,8 @@ http://localhost:11000/api
 /api/user/info?id=
 /api/user/info?email=
 /api/user/create
+/api/user/update
+/api/user/delete?id=
 ```
 
 <br />
