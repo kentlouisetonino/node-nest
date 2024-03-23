@@ -36,11 +36,23 @@ docker-compose up --build
 # Run the installation of packages and dependency.
 yarn install
 
-# For table migration in MySQL database.
-yarn migration:run
-
 # Start server for development.
 yarn start:dev
+```
+
+> - Typeorm migration commands.
+
+```bash
+# Create an empty migration.
+yarn typeorm migration:create src/migrations/<name-of-migration-file>
+
+# To generate a new migration based on changes.
+yarn typeorm migration:generate src/migrations/<name-of-the-updated-migration-file> -d ./ormconfig.ts
+
+# Run the migration
+yarn typeorm migration:run -d ./ormconfig.ts
+
+# Reverting the migration.
 ```
 
 > - Connecting dockerize database to a database client (Workbench, DBeaver).
