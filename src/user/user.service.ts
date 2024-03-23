@@ -1,5 +1,6 @@
 import {
   ConflictException,
+  HttpStatus,
   Injectable,
   NotFoundException
 } from '@nestjs/common';
@@ -9,6 +10,7 @@ import { ConfigService } from '@nestjs/config';
 import { User } from 'src/entities/User';
 import { Repository } from 'typeorm';
 import { CreateUserInput, UpdateUserInput } from './dto/user.input';
+import { DeleteUserOutput } from './dto/user.output';
 
 @Injectable()
 export class UserService {
@@ -76,5 +78,21 @@ export class UserService {
     const updateUser = this.userRepo.create(payload);
 
     return await this.userRepo.save(updateUser);
+  }
+
+  async deleteUser(id: number): Promise<DeleteUserOutput> {
+    const deletedUser = await this.userRepo.delete(id);
+
+    if (deletedUser.affected) {
+      return {
+        status: HttpStatus.OK,
+        message: 'User successfully deleted.'
+      };
+    } else {
+      return {
+        status: HttpStatus.OK,
+        message: 'User already deleted.'
+      };
+    }
   }
 }
