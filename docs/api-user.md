@@ -18,8 +18,7 @@ Raw-JSON Payload:
         email: string,
         password: string,
     }
-
-SUCCESS RESPONSE:
+Success Reponse:
     {
         id: number,
         firstName: string,
@@ -30,8 +29,7 @@ SUCCESS RESPONSE:
         createdAt: string,
         updatedAt: string,
     }
-
-ERROR RESPONSE:
+Error Response:
     {
         statusCode: number,
         message: string,

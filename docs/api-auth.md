@@ -10,12 +10,10 @@ Raw-JSON Payload:
         email: string,
         password: string,
     }
-
 Success Reponse:
     {
         accessToken: string,
     }
-
 Error Response:
     {
         message: string,

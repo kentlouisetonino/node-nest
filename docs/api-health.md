@@ -5,7 +5,6 @@
 ```plaintext
 Method: GET
 URL: http://localhost:11000/api/health
-
 SUCCESS RESPONSE:
     {
         message: string,
