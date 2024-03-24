@@ -4,7 +4,7 @@
 
 > - You must login first to obtain the accessToken.
 
-```plaintext
+```bash
 # Create a user data.
 Method: POST
 URL: http://localhost:11000/api/user/create
