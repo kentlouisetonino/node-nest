@@ -3,7 +3,7 @@
 > - This is based on Postman testing.
 
 ```bash
-# Create a user.
+# Get an acesss token.
 Method: POST
 URL: http://localhost:11000/api/auth/login
 Raw-JSON Payload:
