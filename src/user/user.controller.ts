@@ -50,6 +50,6 @@ export class UserController {
 
   @Delete('delete')
   deleteUser(@Req() req: Request): Promise<DeleteUserOutput> {
-    return this.userService.deleteUser(Number(req.params.id));
+    return this.userService.deleteUser(Number(req.query.id));
   }
 }
