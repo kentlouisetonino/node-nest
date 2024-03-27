@@ -1,4 +1,4 @@
-### DESCRIPTION
+### Description
 #
 > - A Node.js practice project that uses Nest.js framework.
 
@@ -28,7 +28,7 @@ http://localhost:11000/api
 
 
 
-### LOCAL DEVELOPMENT
+### Local Development
 ##
 > - Create a `.env` file in the root directory and put the key value pair.
 
