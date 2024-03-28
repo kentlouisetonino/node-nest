@@ -1,4 +1,4 @@
-### API TESTING
+### API Testing
 #
 > - This is based on Postman testing.
 
