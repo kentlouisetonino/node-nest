@@ -28,6 +28,17 @@ http://localhost:11000/api
 
 
 
+### System Design
+#
+<br />
+
+![node-nest-system-design](https://github.com/kentlouisetonino/node-nest/assets/69438999/eca9994a-3ba3-4293-aadc-3e72d1630b91)
+
+<br />
+<br />
+
+
+
 ### Local Development
 ##
 > - Create a `.env` file in the root directory and put the key value pair.
